@@ -34,36 +34,36 @@ export default function Page() {
         <h2 className="text-center font-bold mb-2">Armada Kami</h2>
         <div className="flex flex-wrap justify-around">
           <div className="flex flex-col items-center w-full sm:w-[calc(100%-20px)] md:w-[calc(50%-20px)] lg:w-[calc(33.3%-20px)] mb-5">
-            <img src="/pickup.png" alt="Pickup" className="w-full h-auto object-cover mb-2" />
+            <img src="/Pickup.png" alt="Pickup" className="w-1/2 h-auto object-cover mb-2" />
             <p className="text-center font-bold mb-2">Pickup</p>
           </div>
           <div className="flex flex-col items-center w-full sm:w-[calc(100%-20px)] md:w-[calc(50%-20px)] lg:w-[calc(33.3%-20px)] mb-5">
-            <img src="/blindvan.jpg" alt="Blind Van" className="w-full h-auto object-cover mb-2" />
+            <img src="/Blindvan.png" alt="Blind Van" className="w-1/2 h-auto object-cover mb-2" />
             <p className="text-center font-bold mb-2">Blind Van</p>
           </div>
           <div className="flex flex-col items-center w-full sm:w-[calc(100%-20px)] md:w-[calc(50%-20px)] lg:w-[calc(33.3%-20px)] mb-5">
-            <img src="/pickup.png" alt="Pickup" className="w-full h-auto object-cover mb-2" />
-            <p className="text-center font-bold mb-2">Pickup</p>
+            <img src="/CDEBox.png" alt="CDE Box" className="w-1/2 h-auto object-cover mb-2" />
+            <p className="text-center font-bold mb-2">CDE Box</p>
           </div>
           <div className="flex flex-col items-center w-full sm:w-[calc(100%-20px)] md:w-[calc(50%-20px)] lg:w-[calc(33.3%-20px)] mb-5">
-            <img src="/pickup.png" alt="Pickup" className="w-full h-auto object-cover mb-2" />
-            <p className="text-center font-bold mb-2">Pickup</p>
+            <img src="/CDEOpen.png" alt="CDE Open" className="w-1/2 h-auto object-cover mb-2" />
+            <p className="text-center font-bold mb-2">CDE Open</p>
           </div>
           <div className="flex flex-col items-center w-full sm:w-[calc(100%-20px)] md:w-[calc(50%-20px)] lg:w-[calc(33.3%-20px)] mb-5">
-            <img src="/pickup.png" alt="Pickup" className="w-full h-auto object-cover mb-2" />
-            <p className="text-center font-bold mb-2">Pickup</p>
+            <img src="/CDDBox.png" alt="CDD Box" className="w-1/2 h-auto object-cover mb-2" />
+            <p className="text-center font-bold mb-2">CDD Box</p>
           </div>
           <div className="flex flex-col items-center w-full sm:w-[calc(100%-20px)] md:w-[calc(50%-20px)] lg:w-[calc(33.3%-20px)] mb-5">
-            <img src="/pickup.png" alt="Pickup" className="w-full h-auto object-cover mb-2" />
-            <p className="text-center font-bold mb-2">Pickup</p>
+            <img src="/CDDOpen.png" alt="CDD Open" className="w-1/2 h-auto object-cover mb-2" />
+            <p className="text-center font-bold mb-2">CDD Open</p>
           </div>
         </div>
       </div>
       <div className="relative flex-1">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/truk.png"
-            alt="Descriptive text for screen readers"
+            src="/KandangTruck3.jpg"
+            alt="Truck"
             layout="fill"
             objectFit="cover"
             className="opacity-50"

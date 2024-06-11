@@ -17,7 +17,7 @@ const TentangKami = () => {
       <div className="relative flex-1">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/peta.png"
+            src="/KandangTruck1.jpg"
             alt="Descriptive text for screen readers"
             layout="fill"
             objectFit="cover"
