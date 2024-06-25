@@ -6,7 +6,7 @@ import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
 
 const Mitra = () => {
   return (
-    <div className="relative flex flex-col min-h-screen">
+    <div className="relative flex flex-col min-h-screen text-black">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Mitra</title>
@@ -31,7 +31,7 @@ const Mitra = () => {
         </div>
       </div>
       <div className="w-full p-5 bg-white">
-        <h2 className="text-center font-bold mb-2">Apakah ada mempunyai salah satu dari armada ini?</h2>
+        <h2 className="text-center font-bold mb-2 text-3xl">Apakah anda mempunyai salah satu dari armada ini?</h2>
         <div className="flex overflow-x-auto justify-around flex-nowrap">
           <div className="flex flex-col items-center w-64 mb-5">
             <img src="/Pickup.png" alt="Pickup" className="w-3/4 h-auto object-cover mb-2" />

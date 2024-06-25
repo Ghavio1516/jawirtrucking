@@ -6,7 +6,7 @@ import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
 
 const TentangKami = () => {
   return (
-    <div className="relative flex flex-col min-h-screen">
+    <div className="relative flex flex-col min-h-screen text-black">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Mitra</title>
@@ -25,7 +25,7 @@ const TentangKami = () => {
           />
         </div>
         <div className="relative flex flex-col justify-center items-center h-screen z-10">
-          <h1 className="text-5xl font-bold text-center mb-6" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+          <h1 className="text-5xl font-bold text-white text-center mb-6" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
             TENTANG KAMI
           </h1>
           <p className="text-4xl text-red-500 text-center px-10 md:px-20 lg:px-40" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
