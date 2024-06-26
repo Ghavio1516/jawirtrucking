@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Navbar from "../components/Navbar";
 import Image from 'next/image'; 
 import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
-import Link from 'next/link'; // Import Link from next/link
+import Link from 'next/link';
 
 export default function Page() {
   return (
@@ -25,7 +25,7 @@ export default function Page() {
           />
         </div>
         <div className="relative flex justify-center items-center h-screen z-10">
-          <h1 className="text-4xl text-red-500 text-center" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+          <h1 className="text-4xl md:text-6xl text-red-500 text-center" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
             Menyambung Jawa Timur <br /> Satu per Satu Rek!
           </h1>
         </div>
@@ -33,30 +33,19 @@ export default function Page() {
       <div className="w-full p-5 bg-white">
         <h2 className="text-center font-bold mb-2">Armada Kami</h2>
         <div className="flex flex-wrap justify-around">
-          <div className="flex flex-col items-center w-full sm:w-[calc(100%-20px)] md:w-[calc(50%-20px)] lg:w-[calc(33.3%-20px)] mb-5">
-            <img src="/Pickup.png" alt="Pickup" className="w-1/2 h-auto object-cover mb-2" />
-            <p className="text-center font-bold mb-2">Pickup</p>
-          </div>
-          <div className="flex flex-col items-center w-full sm:w-[calc(100%-20px)] md:w-[calc(50%-20px)] lg:w-[calc(33.3%-20px)] mb-5">
-            <img src="/Blindvan.png" alt="Blind Van" className="w-1/2 h-auto object-cover mb-2" />
-            <p className="text-center font-bold mb-2">Blind Van</p>
-          </div>
-          <div className="flex flex-col items-center w-full sm:w-[calc(100%-20px)] md:w-[calc(50%-20px)] lg:w-[calc(33.3%-20px)] mb-5">
-            <img src="/CDEBox.png" alt="CDE Box" className="w-1/2 h-auto object-cover mb-2" />
-            <p className="text-center font-bold mb-2">CDE Box</p>
-          </div>
-          <div className="flex flex-col items-center w-full sm:w-[calc(100%-20px)] md:w-[calc(50%-20px)] lg:w-[calc(33.3%-20px)] mb-5">
-            <img src="/CDEOpen.png" alt="CDE Open" className="w-1/2 h-auto object-cover mb-2" />
-            <p className="text-center font-bold mb-2">CDE Open</p>
-          </div>
-          <div className="flex flex-col items-center w-full sm:w-[calc(100%-20px)] md:w-[calc(50%-20px)] lg:w-[calc(33.3%-20px)] mb-5">
-            <img src="/CDDBox.png" alt="CDD Box" className="w-1/2 h-auto object-cover mb-2" />
-            <p className="text-center font-bold mb-2">CDD Box</p>
-          </div>
-          <div className="flex flex-col items-center w-full sm:w-[calc(100%-20px)] md:w-[calc(50%-20px)] lg:w-[calc(33.3%-20px)] mb-5">
-            <img src="/CDDOpen.png" alt="CDD Open" className="w-1/2 h-auto object-cover mb-2" />
-            <p className="text-center font-bold mb-2">CDD Open</p>
-          </div>
+          {[
+            { src: "/Pickup.png", alt: "Pickup", text: "Pickup" },
+            { src: "/Blindvan.png", alt: "Blind Van", text: "Blind Van" },
+            { src: "/CDEBox.png", alt: "CDE Box", text: "CDE Box" },
+            { src: "/CDEOpen.png", alt: "CDE Open", text: "CDE Open" },
+            { src: "/CDDBox.png", alt: "CDD Box", text: "CDD Box" },
+            { src: "/CDDOpen.png", alt: "CDD Open", text: "CDD Open" }
+          ].map((item, index) => (
+            <div key={index} className="flex flex-col items-center w-full sm:w-[calc(50%-20px)] md:w-[calc(33.3%-20px)] lg:w-[calc(20%-20px)] mb-5">
+              <img src={item.src} alt={item.alt} className="w-full sm:w-1/2 h-auto object-cover mb-2" />
+              <p className="text-center font-bold mb-2">{item.text}</p>
+            </div>
+          ))}
         </div>
       </div>
       <div className="relative flex-1">
@@ -70,7 +59,7 @@ export default function Page() {
           />
         </div>
         <div className="relative flex flex-col justify-center items-center h-screen z-10">
-          <h1 className="text-4xl text-red-500 text-center mb-5" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+          <h1 className="text-4xl md:text-6xl text-red-500 text-center mb-5" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
             Ingin menjadi mitra?
           </h1>
           <Link href="/mitra" legacyBehavior>
@@ -90,7 +79,7 @@ export default function Page() {
           <p className="text-lg mb-2">Truck (Surabaya - Bali) = Rp. 1.500.000</p>
         </div>
       </div>
-      <div className="flex justify-center items-center bg-gray-100 p-10">
+      <div className="flex flex-col sm:flex-row justify-center items-center bg-gray-100 p-10">
         <a href="mailto:info@jawirtrucking.com" className="flex flex-col items-center bg-white shadow-md p-5 m-5 w-80 rounded">
           <AiOutlineMail className="text-4xl mb-3 text-blue-500" />
           <h2 className="text-xl font-bold mb-3">Email Kami</h2>
