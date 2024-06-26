@@ -1,4 +1,4 @@
-// pages/mitra.js
+'use client';
 import Head from 'next/head';
 import Navbar from "../../components/Navbar";
 import Image from 'next/image';
@@ -16,13 +16,7 @@ const Mitra = () => {
       <Navbar />
       <div className="relative flex-1">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/KandangTruck2.jpg"
-            alt="Descriptive text for screen readers"
-            layout="fill"
-            objectFit="cover"
-            className="opacity-50"
-          />
+          <div className="background-image-1"></div>
         </div>
         <div className="relative flex justify-center items-center h-screen z-10 px-4">
           <h1 className="text-2xl sm:text-4xl text-red-500 text-center" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
@@ -61,13 +55,7 @@ const Mitra = () => {
       </div>
       <div className="relative flex-1">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/KandangTruck4.jpg"
-            alt="Descriptive text for screen readers"
-            layout="fill"
-            objectFit="cover"
-            className="opacity-50"
-          />
+          <div className="background-image-2"></div>
         </div>
         <div className="relative flex justify-center items-center h-screen z-10 px-4">
           <h1 className="text-2xl sm:text-4xl text-red-500 text-center" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
@@ -87,6 +75,48 @@ const Mitra = () => {
           <p>+62 812-3456-7890</p>
         </a>
       </div>
+
+      <style jsx>{`
+        .background-image-1 {
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+          background-image: url('/KandangTruck2.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          opacity: 0.5;
+          animation: slideBackground1 20s linear infinite alternate;
+        }
+
+        .background-image-2 {
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+          background-image: url('/KandangTruck4.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          opacity: 0.5;
+          animation: slideBackground2 20s linear infinite alternate;
+        }
+
+        @keyframes slideBackground1 {
+          0% {
+            background-position: 0 0;
+          }
+          100% {
+            background-position: 100% 0;
+          }
+        }
+
+        @keyframes slideBackground2 {
+          0% {
+            background-position: 0 0;
+          }
+          100% {
+            background-position: 100% 0;
+          }
+        }
+      `}</style>
     </div>
   );
 };

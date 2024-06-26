@@ -1,6 +1,7 @@
+'use client';
 import Head from 'next/head';
 import Navbar from "../components/Navbar";
-import Image from 'next/image'; 
+import Image from 'next/image';
 import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
 import Link from 'next/link';
 
@@ -16,13 +17,7 @@ export default function Page() {
       <Navbar />
       <div className="relative flex-1">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/peta.png"
-            alt="Descriptive text for screen readers"
-            layout="fill"
-            objectFit="cover"
-            className="opacity-50"
-          />
+          <div className="background-image-1"></div>
         </div>
         <div className="relative flex justify-center items-center h-screen z-10">
           <h1 className="text-4xl md:text-6xl text-red-500 text-center" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
@@ -50,13 +45,7 @@ export default function Page() {
       </div>
       <div className="relative flex-1">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/KandangTruck3.jpg"
-            alt="Truck"
-            layout="fill"
-            objectFit="cover"
-            className="opacity-50"
-          />
+          <div className="background-image-2"></div>
         </div>
         <div className="relative flex flex-col justify-center items-center h-screen z-10">
           <h1 className="text-4xl md:text-6xl text-red-500 text-center mb-5" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
@@ -91,6 +80,48 @@ export default function Page() {
           <p>+62 812-3456-7890</p>
         </a>
       </div>
+
+      <style jsx>{`
+        .background-image-1 {
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+          background-image: url('/peta.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+          opacity: 0.5;
+          animation: slideBackground1 20s linear infinite alternate;
+        }
+
+        .background-image-2 {
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+          background-image: url('/KandangTruck3.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          opacity: 0.5;
+          animation: slideBackground2 20s linear infinite alternate;
+        }
+
+        @keyframes slideBackground1 {
+          0% {
+            background-position: 0 0;
+          }
+          100% {
+            background-position: 100% 0;
+          }
+        }
+
+        @keyframes slideBackground2 {
+          0% {
+            background-position: 0 0;
+          }
+          100% {
+            background-position: 100% 0;
+          }
+        }
+      `}</style>
     </div>
   );
 }
