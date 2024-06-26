@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center bg-blue-600 p-4">
+    <nav className="flex justify-between items-center bg-blue-600 p-4 relative">
       <div className="flex flex-col">
         <Link href="/" legacyBehavior>
           <a className="text-white text-xl font-bold">Jawir Trucking</a>
@@ -42,25 +42,34 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
-      {menuOpen && (
-        <ul className="md:hidden flex flex-col absolute top-16 right-0 bg-blue-600 w-full">
-          <li className="text-white text-lg p-4">
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-blue-600 text-white transform ${
+          menuOpen ? 'translate-x-0' : 'translate-x-full'
+        } transition-transform duration-300 ease-in-out z-50`}
+      >
+        <button onClick={toggleMenu} className="absolute top-4 right-4 text-white focus:outline-none">
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <ul className="flex flex-col mt-16">
+          <li className="text-white text-lg p-4 border-b border-blue-500">
             <Link href="/" legacyBehavior>
               <a onClick={toggleMenu}>Beranda</a>
             </Link>
           </li>
-          <li className="text-white text-lg p-4">
+          <li className="text-white text-lg p-4 border-b border-blue-500">
             <Link href="/mitra" legacyBehavior>
               <a onClick={toggleMenu}>Mitra</a>
             </Link>
           </li>
-          <li className="text-white text-lg p-4">
+          <li className="text-white text-lg p-4 border-b border-blue-500">
             <Link href="/tentang-kami" legacyBehavior>
               <a onClick={toggleMenu}>Tentang Kami</a>
             </Link>
           </li>
         </ul>
-      )}
+      </div>
     </nav>
   );
 };
