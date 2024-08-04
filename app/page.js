@@ -1,8 +1,8 @@
 'use client';
 import Head from 'next/head';
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import Image from 'next/image';
-import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
@@ -28,10 +28,10 @@ export default function Page() {
   const items = [
     { src: "/Pickup.png", alt: "Pickup", text: "Pickup", weight: "Beban Maksimum : 1 ton", price: "Surabaya - Malang : Rp. 740.000" },
     { src: "/Blindvan.png", alt: "Blind Van", text: "Blind Van", weight: "Beban Maksimum : 1 ton", price: "Madiun - Mojokerto : Rp. 890.400" },
-    { src: "/CDEBox.png", alt: "CDE Box", text: "CDE Box", weight: "Beban Maksimum : 2 ton", price: "Tuban - Lumajang : Rp. 2.487.500" },
     { src: "/CDEOpen.png", alt: "CDE Open", text: "CDE Open", weight: "Beban Maksimum : 2 ton", price: "Blitar - Jember : Rp. 2.145.600" },
-    { src: "/CDDBox.png", alt: "CDD Box", text: "CDD Box", weight: "Beban Maksimum : 4 ton", price: "Surabaya - Madiun : Rp. 2.136.500" },
-    { src: "/CDDOpen.png", alt: "CDD Open", text: "CDD Open", weight: "Beban Maksimum : 4 ton", price: "Banyuwangi - Probolinggo : Rp. 2.307.200" }
+    { src: "/CDEBox.png", alt: "CDE Box", text: "CDE Box", weight: "Beban Maksimum : 2 ton", price: "Tuban - Lumajang : Rp. 2.487.500" },
+    { src: "/CDDOpen.png", alt: "CDD Open", text: "CDD Open", weight: "Beban Maksimum : 4 ton", price: "Banyuwangi - Probolinggo : Rp. 2.307.200" },
+    { src: "/CDDBox.png", alt: "CDD Box", text: "CDD Box", weight: "Beban Maksimum : 4 ton", price: "Surabaya - Madiun : Rp. 2.136.500" }
   ];
 
   const handlePrevClick = () => {
@@ -173,19 +173,7 @@ export default function Page() {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row justify-center items-center bg-gray-100 p-10">
-        <a href="mailto:info@jawirtrucking.id" className="flex flex-col items-center bg-white shadow-md p-5 m-5 w-80 rounded font-roboto">
-          <AiOutlineMail className="text-4xl mb-3 text-blue-500" />
-          <h2 className="text-xl font-bold mb-3">Email Kami</h2>
-          <p>info@jawirtrucking.id</p>
-        </a>
-        <a href="https://wa.me/6285183005400" className="flex flex-col items-center bg-white shadow-md p-5 m-5 w-80 rounded font-roboto">
-          <AiOutlineWhatsApp className="text-4xl mb-3 text-green-500" />
-          <h2 className="text-xl font-bold mb-3">WhatsApp Kami</h2>
-          <p>+62 851-8300-5400</p>
-        </a>
-      </div>
-
+      <Footer />
       <style jsx>{`
         .background-image-1 {
           position: absolute;
