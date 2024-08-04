@@ -28,10 +28,10 @@ export default function Page() {
   const items = [
     { src: "/Pickup.png", alt: "Pickup", text: "Pickup", weight: "Beban Maksimum : 1 ton", price: "Surabaya - Malang : Rp. 740.000" },
     { src: "/Blindvan.png", alt: "Blind Van", text: "Blind Van", weight: "Beban Maksimum : 1 ton", price: "Madiun - Mojokerto : Rp. 890.400" },
-    { src: "/CDEBox.png", alt: "CDE Box", text: "CDE Box", weight: "Beban Maksimum : 2 ton", price: "Blitar - Jember : Rp. 2.145.600" },
-    { src: "/CDEOpen.png", alt: "CDE Open", text: "CDE Open", weight: "Beban Maksimum : 2 ton", price: "Tuban - Lumajang : Rp. 2.487.500" },
-    { src: "/CDDBox.png", alt: "CDD Box", text: "CDD Box", weight: "Beban Maksimum : 4 ton", price: "Banyuwangi - Probolinggo : Rp. 2.307.200" },
-    { src: "/CDDOpen.png", alt: "CDD Open", text: "CDD Open", weight: "Beban Maksimum : 4 ton", price: "Surabaya - Madiun : Rp. 2.136.500" }
+    { src: "/CDEBox.png", alt: "CDE Box", text: "CDE Box", weight: "Beban Maksimum : 2 ton", price: "Tuban - Lumajang : Rp. 2.487.500" },
+    { src: "/CDEOpen.png", alt: "CDE Open", text: "CDE Open", weight: "Beban Maksimum : 2 ton", price: "Blitar - Jember : Rp. 2.145.600" },
+    { src: "/CDDBox.png", alt: "CDD Box", text: "CDD Box", weight: "Beban Maksimum : 4 ton", price: "Surabaya - Madiun : Rp. 2.136.500" },
+    { src: "/CDDOpen.png", alt: "CDD Open", text: "CDD Open", weight: "Beban Maksimum : 4 ton", price: "Banyuwangi - Probolinggo : Rp. 2.307.200" }
   ];
 
   const handlePrevClick = () => {
@@ -102,8 +102,10 @@ export default function Page() {
             Layanan Jawir Trucking
           </h1>
           <p className="text-white mb-8 max-w-lg font-roboto">
-            Selamat datang di Jawir Trucking. Kami percaya layanan truk berkualitas berhak diakses oleh semua orang. Baik anda seorang individu dengan kebutuhan logistik pribadi atau sebuah perusahaan yang memerlukan solusi logistik skala menengah hingga besar, platform digital kami memastikan layanan yang lancar untuk semua.  <br /><br />
-            Nama kami mencerminkan komitmen mendalam untuk menghubungkan tidak hanya kota-kota besar tetapi hingga tingkat kabupaten dan kecamatan, menjembatani cakupan komprehensif di seluruh wilayah Jawa Timur.
+
+            Selamat datang di Jawir Trucking!<br /><br />
+            Kami percaya layanan truk berkualitas berhak diakses oleh semua orang. Baik anda individu dengan kebutuhan logistik pribadi, maupun perusahaan yang memerlukan solusi logistik skala menengah hingga besar. <br /><br />
+            Selain memastikan layanan digital yang lancar untuk semua. Nama kami mencerminkan komitmen mendalam untuk menghubungkan tidak hanya kota-kota besar, tetapi hingga tingkat kabupaten dan kecamatan. Menjembatani cakupan komprehensif di seluruh wilayah Jawa Timur.
           </p>
           <button 
             onClick={() => scrollToSection('armada-kami')} 
