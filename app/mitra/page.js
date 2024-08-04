@@ -63,16 +63,16 @@ const Mitra = () => {
           </h1>
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row justify-center items-center bg-gray-100 p-5 sm:p-10">
-        <a href="mailto:info@jawirtrucking.com" className="flex flex-col items-center bg-white shadow-md p-5 m-3 sm:m-5 w-64 sm:w-80 rounded">
+      <div className="flex flex-col sm:flex-row justify-center items-center bg-gray-100 p-10">
+        <a href="mailto:info@jawirtrucking.id" className="flex flex-col items-center bg-white shadow-md p-5 m-5 w-80 rounded">
           <AiOutlineMail className="text-4xl mb-3 text-blue-500" />
-          <h2 className="text-lg sm:text-xl font-bold mb-3">Email Kami</h2>
-          <p>info@jawirtrucking.com</p>
+          <h2 className="text-xl font-bold mb-3">Email Kami</h2>
+          <p>info@jawirtrucking.id</p>
         </a>
-        <a href="https://wa.me/6281234567890" className="flex flex-col items-center bg-white shadow-md p-5 m-3 sm:m-5 w-64 sm:w-80 rounded">
+        <a href="https://wa.me/6285183005400" className="flex flex-col items-center bg-white shadow-md p-5 m-5 w-80 rounded">
           <AiOutlineWhatsApp className="text-4xl mb-3 text-green-500" />
-          <h2 className="text-lg sm:text-xl font-bold mb-3">WhatsApp Kami</h2>
-          <p>+62 812-3456-7890</p>
+          <h2 className="text-xl font-bold mb-3">WhatsApp Kami</h2>
+          <p>+62 851-8300-5400</p>
         </a>
       </div>
 
