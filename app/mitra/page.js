@@ -2,9 +2,59 @@
 import Head from 'next/head';
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const Mitra = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const items = [
+    { 
+      src: "/KandangTruck1.jpg", 
+      alt: "Truck", 
+      description: (
+        <div>
+          <p className="list-disc pl-5 text-left">Kami mencari calon mitra yang memiliki armada truk yang mencakup berbagai jenis seperti :</p>
+          <ul className="list-disc pl-5 text-left">
+            <li>Pickup</li>
+            <li>Blind Van</li>
+            <li>CDE Open / Box</li>
+            <li>CDD Open / Box</li>
+          </ul>
+        </div>
+      ) 
+    },
+    { 
+      src: "/peta.png", 
+      alt: "Peta", 
+      description: (
+        <p className="text-left">
+          Kami mencari calon mitra yang berdomisili di Jawa Timur, sehingga dapat beroperasi dengan efisien dan mendukung jaringan logistik lokal kami.
+        </p>
+      ) 
+    }
+  ];
+
+  const handlePrevClick = () => {
+    setCurrentIndex((prevIndex) => prevIndex === 0 ? items.length - 1 : prevIndex - 1);
+  };
+
+  const handleNextClick = () => {
+    setCurrentIndex((prevIndex) => prevIndex === items.length - 1 ? 0 : prevIndex + 1);
+  };
+
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="relative flex flex-col min-h-screen text-black">
       <Head>
@@ -12,45 +62,69 @@ const Mitra = () => {
         <title>Mitra</title>
         <meta name="description" content="Halaman Mitra" />
         <link rel="icon" href="/favicon.ico" />
+        <link 
+          rel="stylesheet" 
+          href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"
+        />
+        <link 
+          rel="stylesheet" 
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        />
       </Head>
       <Navbar />
       <div className="relative flex-1">
         <div className="absolute inset-0 z-0">
           <div className="background-image-1"></div>
         </div>
-        <div className="relative flex justify-center items-center h-screen z-10 px-4">
-          <h1 className="text-2xl sm:text-4xl text-red-500 text-center" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-            Ingin Bergabung Menjadi Mitra Jawir Trucking?
+        <div className="relative flex flex-col justify-center items-center h-screen z-10 px-4">
+          <h1 
+            className="text-4xl md:text-6xl text-white text-center" 
+            style={{ 
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', 
+              fontFamily: 'Oswald, sans-serif' 
+            }}
+          >
+            Ingin Bergabung Menjadi Mitra <br /> Jawir Trucking?
           </h1>
+          <p className="text-lg text-white mt-4 max-w-2xl text-center">
+            Bergabung dengan Jawir Trucking dan jadilah pelopor dalam solusi logistik modern dengan solusi pengiriman yang lebih efisien dan terintegrasi di seluruh Jawa Timur.
+          </p>
+          <button 
+            onClick={() => scrollToSection('ketentuan-mitra')} 
+            className="mt-8 bg-blue-500 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-blue-600"
+          >
+            Pelajari Lebih Lanjut
+          </button>
         </div>
       </div>
-      <div className="w-full p-5 bg-white">
-        <h2 className="text-center font-bold mb-2 text-xl sm:text-3xl">Apakah anda mempunyai salah satu dari armada ini?</h2>
-        <div className="flex flex-col sm:flex-row overflow-x-auto justify-around flex-wrap">
-          <div className="flex flex-col items-center w-full sm:w-64 mb-5">
-            <img src="/Pickup.png" alt="Pickup" className="w-3/4 h-auto object-cover mb-2" />
-            <p className="text-center font-bold mb-2">Pickup</p>
+
+      <div id="ketentuan-mitra" className="w-full flex justify-center items-center flex-col bg-white py-12">
+        <h2 className="text-center font-bold text-4xl mb-4 font-oswald">Ketentuan Bermitra</h2>
+        <p className="text-center text-lg mb-8 max-w-2xl font-roboto">
+            Untuk memenuhi beragam kebutuhan logistik pelanggan kami, ketahui ketentuan bermitra berikut.
+        </p>
+        <div className="relative w-full max-w-7xl mx-auto">
+          <div className="relative flex overflow-hidden w-full">
+            {items.map((item, index) => (
+              <div 
+                key={index} 
+                className={`transition-opacity duration-500 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0 absolute w-full'}`}
+              >
+                <div className="bg-white p-5 rounded-lg shadow-lg flex items-center w-full">
+                  <Image src={item.src} alt={item.alt} width={windowWidth < 640 ? 150 : 400} height={windowWidth < 640 ? 150 : 300} className="object-contain w-2/5" />
+                  <div className="ml-4 w-3/5">
+                    {item.description}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="flex flex-col items-center w-full sm:w-64 mb-5">
-            <img src="/Blindvan.png" alt="Blind Van" className="w-3/4 h-auto object-cover mb-2" />
-            <p className="text-center font-bold mb-2">Blind Van</p>
-          </div>
-          <div className="flex flex-col items-center w-full sm:w-64 mb-5">
-            <img src="/CDEBox.png" alt="CDE Box" className="w-3/4 h-auto object-cover mb-2" />
-            <p className="text-center font-bold mb-2">CDE Box</p>
-          </div>
-          <div className="flex flex-col items-center w-full sm:w-64 mb-5">
-            <img src="/CDEOpen.png" alt="CDE Open" className="w-3/4 h-auto object-cover mb-2" />
-            <p className="text-center font-bold mb-2">CDE Open</p>
-          </div>
-          <div className="flex flex-col items-center w-full sm:w-64 mb-5">
-            <img src="/CDDBox.png" alt="CDD Box" className="w-3/4 h-auto object-cover mb-2" />
-            <p className="text-center font-bold mb-2">CDD Box</p>
-          </div>
-          <div className="flex flex-col items-center w-full sm:w-64 mb-5">
-            <img src="/CDDOpen.png" alt="CDD Open" className="w-3/4 h-auto object-cover mb-2" />
-            <p className="text-center font-bold mb-2">CDD Open</p>
-          </div>
+          <button onClick={handlePrevClick} className="absolute left-0 top-1/2 transform -translate-y-1/2 p-3 bg-gray-300 rounded-full shadow-lg">
+            &lt;
+          </button>
+          <button onClick={handleNextClick} className="absolute right-0 top-1/2 transform -translate-y-1/2 p-3 bg-gray-300 rounded-full shadow-lg">
+            &gt;
+          </button>
         </div>
       </div>
       <div className="relative flex-1">
@@ -58,11 +132,26 @@ const Mitra = () => {
           <div className="background-image-2"></div>
         </div>
         <div className="relative flex justify-center items-center h-screen z-10 px-4">
-          <h1 className="text-2xl sm:text-4xl text-red-500 text-center" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-            Berdomisili di Jawa Timur?
-          </h1>
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">Anda Adalah Mitra yang Kami Cari!!</h1>
+            <p className="text-lg text-white mb-8">
+              Bergabunglah dengan Jawir Trucking dan menjadi bagian dari revolusi logistik di Jawa Timur. <br/> Kami mencari mitra dengan komitmen dan visi yang sama untuk memperluas jaringan transportasi yang efisien dan handal.
+            </p>
+            <div className="flex justify-center gap-4">
+              <a href="mailto:hr@jawirtrucking.com" className="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-blue-600 flex items-center gap-2">
+                <img src="/mail.png" alt="Email Icon" className="w-6 h-6" />
+                Hubungi Kami
+              </a>
+              <a href="https://wa.me/6285183005400" className="bg-green-500 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-green-600 flex items-center gap-2">
+                <img src="/whatsapp.png" alt="WhatsApp Icon" className="w-6 h-6" />
+                Hubungi Kami
+              </a>
+            </div>
+          </div>
         </div>
       </div>
+
+
       <Footer />
 
       <style jsx>{`

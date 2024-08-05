@@ -163,7 +163,7 @@ export default function Page() {
           <div className="background-image-2"></div>
         </div>
         <div className="relative flex flex-col justify-center items-center h-screen z-10">
-          <h1 className="text-4xl md:text-6xl text-red-500 text-center mb-5 font-oswald" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+          <h1 className="text-4xl md:text-6xl text-white text-center mb-5 font-oswald" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
             Ingin Menjadi Mitra Jawir Trucking?
           </h1>
           <Link href="/mitra" legacyBehavior>
@@ -173,6 +173,7 @@ export default function Page() {
           </Link>
         </div>
       </div>
+
       <Footer />
       <style jsx>{`
         .background-image-1 {
