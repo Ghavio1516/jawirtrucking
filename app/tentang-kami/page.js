@@ -36,8 +36,9 @@ const TentangKami = () => {
       <div className="relative flex-1 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="background-image"></div>
-        </div>
-        <div className="relative flex flex-col justify-center items-center h-full min-h-[70vh] z-10 px-5 md:px-10 py-10 md:py-20">
+        </div> 
+        {/* h-full */}
+        <div className="relative flex flex-col justify-center items-center h-screen min-h-[70vh] z-10 px-5 md:px-10 py-10 md:py-20">      
           <h1 className="text-2xl sm:text-4xl font-oswald font-bold text-white text-center mb-4 sm:mb-6" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
             TENTANG KAMI
           </h1>
