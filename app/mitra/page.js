@@ -148,7 +148,7 @@ const Mitra = () => {
             </p>
             <div className="flex justify-center gap-4">
               <a 
-                href="mailto:hr@jawirtrucking.com" 
+                href="mailto:hr@jawirtrucking.id" 
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-blue-600 flex items-center gap-2"
               >
                 <img src="/mail.png" alt="Email Icon" className="w-6 h-6" />
