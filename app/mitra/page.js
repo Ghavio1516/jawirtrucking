@@ -86,7 +86,7 @@ const Mitra = () => {
           >
             Ingin Bergabung Menjadi Mitra <br /> Jawir Trucking?
           </h1>
-          <p className="text-lg text-white mt-4 max-w-2xl text-center">
+          <p className="text-lg text-white mt-4 max-w-2xl text-center" style={{ fontFamily: 'Roboto, sans-serif' }}>
             Bergabung dengan Jawir Trucking dan jadilah pelopor dalam solusi logistik modern dengan solusi pengiriman yang lebih efisien dan terintegrasi di seluruh Jawa Timur.
           </p>
           <button 
@@ -98,10 +98,13 @@ const Mitra = () => {
         </div>
       </div>
 
+
       <div id="ketentuan-mitra" className="w-full flex justify-center items-center flex-col bg-white py-12">
-        <h2 className="text-center font-bold text-4xl mb-4 font-oswald">Ketentuan Bermitra</h2>
+        <h2 className="text-center font-bold text-4xl mb-4 font-oswald">
+          Ketentuan Bermitra
+        </h2>
         <p className="text-center text-lg mb-8 max-w-2xl font-roboto">
-            Untuk memenuhi beragam kebutuhan logistik pelanggan kami, ketahui ketentuan bermitra berikut.
+          Untuk memenuhi beragam kebutuhan logistik pelanggan kami, ketahui ketentuan bermitra berikut.
         </p>
         <div className="relative w-full max-w-7xl mx-auto">
           <div className="relative flex overflow-hidden w-full">
@@ -112,7 +115,7 @@ const Mitra = () => {
               >
                 <div className="bg-white p-5 rounded-lg shadow-lg flex items-center w-full">
                   <Image src={item.src} alt={item.alt} width={windowWidth < 640 ? 150 : 400} height={windowWidth < 640 ? 150 : 300} className="object-contain w-2/5" />
-                  <div className="ml-4 w-3/5">
+                  <div className="ml-4 w-3/5 font-roboto">
                     {item.description}
                   </div>
                 </div>
@@ -127,22 +130,34 @@ const Mitra = () => {
           </button>
         </div>
       </div>
+
       <div className="relative flex-1">
         <div className="absolute inset-0 z-0">
           <div className="background-image-2"></div>
         </div>
         <div className="relative flex justify-center items-center h-screen z-10 px-4">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-6">Anda Adalah Mitra yang Kami Cari!!</h1>
-            <p className="text-lg text-white mb-8">
+            <h1 
+              className="text-4xl font-oswald font-bold text-white mb-6" 
+              style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
+            >
+              Anda Adalah Mitra yang Kami Cari!!
+            </h1>
+            <p className="text-lg font-roboto text-white mb-8">
               Bergabunglah dengan Jawir Trucking dan menjadi bagian dari revolusi logistik di Jawa Timur. <br/> Kami mencari mitra dengan komitmen dan visi yang sama untuk memperluas jaringan transportasi yang efisien dan handal.
             </p>
             <div className="flex justify-center gap-4">
-              <a href="mailto:hr@jawirtrucking.com" className="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-blue-600 flex items-center gap-2">
+              <a 
+                href="mailto:hr@jawirtrucking.com" 
+                className="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-blue-600 flex items-center gap-2"
+              >
                 <img src="/mail.png" alt="Email Icon" className="w-6 h-6" />
                 Hubungi Kami
               </a>
-              <a href="https://wa.me/6285183005400" className="bg-green-500 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-green-600 flex items-center gap-2">
+              <a 
+                href="https://wa.me/6285183005400" 
+                className="bg-green-500 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-green-600 flex items-center gap-2"
+              >
                 <img src="/whatsapp.png" alt="WhatsApp Icon" className="w-6 h-6" />
                 Hubungi Kami
               </a>
@@ -150,6 +165,7 @@ const Mitra = () => {
           </div>
         </div>
       </div>
+
 
 
       <Footer />

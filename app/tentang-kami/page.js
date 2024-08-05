@@ -23,6 +23,14 @@ const TentangKami = () => {
         <title>Tentang Kami</title>
         <meta name="description" content="Halaman Tentang Kami" />
         <link rel="icon" href="/favicon.ico" />
+        <link 
+          rel="stylesheet" 
+          href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"
+        />
+        <link 
+          rel="stylesheet" 
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        />
       </Head>
       <Navbar />
       <div className="relative flex-1 overflow-hidden">
@@ -30,10 +38,10 @@ const TentangKami = () => {
           <div className="background-image"></div>
         </div>
         <div className="relative flex flex-col justify-center items-center h-full min-h-[70vh] z-10 px-5 md:px-10 py-10 md:py-20">
-          <h1 className="text-2xl sm:text-4xl font-bold text-white text-center mb-4 sm:mb-6" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+          <h1 className="text-2xl sm:text-4xl font-oswald font-bold text-white text-center mb-4 sm:mb-6" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
             TENTANG KAMI
           </h1>
-          <p className="text-base sm:text-lg lg:text-xl text-red-500 text-center leading-relaxed" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+          <p className="text-base sm:text-lg lg:text-xl font-roboto text-white text-center leading-relaxed" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
             Di JAWIR TRUCKING, kami berdedikasi untuk melayani masyarakat Jawa Timur dengan sistem digitalisasi yang inovatif. Sebagai perusahaan trucking yang bangga berasal dari Jawa Timur, kami hadir untuk menjembatani kebutuhan dan penawaran, menciptakan koneksi yang lebih baik antara pelanggan dan pengemudi. Terinspirasi oleh kemajuan di provinsi-provinsi terdepan di Indonesia, kami berkomitmen untuk membawa kemajuan yang sama ke Jawa Timur. Dengan semangat gotong royong dan dedikasi untuk kesejahteraan bersama, kami percaya bahwa dengan menghubungkan lebih banyak permintaan dan penawaran, kita dapat berkontribusi pada perekonomian Jawa Timur yang lebih baik dan lebih kuat. Bersama JAWIR TRUCKING, kita membangun masa depan yang lebih cerah untuk semua.
             <br/><br/> #IndonesiaMaju #JawaTimurMaju #JawirManis😋
           </p>
@@ -46,7 +54,7 @@ const TentangKami = () => {
           position: absolute;
           inset: 0;
           z-index: -1; /* Mengatur lapisan di belakang elemen utama */
-          background-image: url('/KandangTruck1.jpg');
+          background-image: url('/peta.png');
           background-size: cover;
           background-repeat: no-repeat;
           opacity: 0.5;
