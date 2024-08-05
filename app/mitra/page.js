@@ -91,7 +91,7 @@ const Mitra = () => {
           </p>
           <button 
             onClick={() => scrollToSection('ketentuan-mitra')} 
-            className="mt-8 bg-blue-500 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-blue-600"
+            className="mt-8 bg-blue-500 text-white px-6 py-3 rounded-full text-lg shadow-lg hover:bg-blue-600"
           >
             Pelajari Lebih Lanjut
           </button>
@@ -149,19 +149,20 @@ const Mitra = () => {
             <div className="flex justify-center gap-4">
               <a 
                 href="mailto:hr@jawirtrucking.id" 
-                className="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-blue-600 flex items-center gap-2"
+                className="bg-blue-500 text-white px-6 py-3 rounded-full text-lg shadow-lg hover:bg-blue-600 flex items-center gap-2"
               >
                 <img src="/mail.png" alt="Email Icon" className="w-6 h-6" />
                 Hubungi Kami
               </a>
               <a 
                 href="https://wa.me/6285183005400" 
-                className="bg-green-500 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-green-600 flex items-center gap-2"
+                className="bg-green-500 text-white px-6 py-3 rounded-full text-lg shadow-lg hover:bg-green-600 flex items-center gap-2"
               >
                 <img src="/whatsapp.png" alt="WhatsApp Icon" className="w-6 h-6" />
                 Hubungi Kami
               </a>
             </div>
+
           </div>
         </div>
       </div>
@@ -178,7 +179,7 @@ const Mitra = () => {
           background-image: url('/KandangTruck2.jpg');
           background-size: cover;
           background-repeat: no-repeat;
-          opacity: 0.5;
+          opacity: 0.45;
           animation: slideBackground1 20s linear infinite alternate;
         }
 
@@ -189,7 +190,7 @@ const Mitra = () => {
           background-image: url('/KandangTruck4.jpg');
           background-size: cover;
           background-repeat: no-repeat;
-          opacity: 0.5;
+          opacity: 0.45;
           animation: slideBackground2 20s linear infinite alternate;
         }
 

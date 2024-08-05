@@ -14,10 +14,13 @@ const Navbar = () => {
     <nav className="flex justify-between items-center bg-blue-600 p-4 relative">
       <div className="flex flex-col">
         <Link href="/" legacyBehavior>
-          <a className="text-white text-xl font-bold">Jawir Trucking</a>
+          <a>
+            <img src="/logo.png" alt="Jawir Trucking Logo" className="h-20 w-auto" />
+          </a>
         </Link>
-        <p className="text-gray-300 text-sm">Jawa Timur Trucking</p>
       </div>
+
+
       <ul className="hidden md:flex gap-6 m-0 p-0">
         <li className="text-white text-lg">
           <Link href="/" legacyBehavior>
@@ -27,6 +30,11 @@ const Navbar = () => {
         <li className="text-white text-lg">
           <Link href="/mitra" legacyBehavior>
             <a>Mitra</a>
+          </Link>
+        </li>
+        <li className="text-white text-lg">
+          <Link href="/contact-us" legacyBehavior>
+            <a>Kontak</a>
           </Link>
         </li>
         <li className="text-white text-lg">

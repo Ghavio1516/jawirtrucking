@@ -57,7 +57,7 @@ const TentangKami = () => {
           background-image: url('/peta.png');
           background-size: cover;
           background-repeat: no-repeat;
-          opacity: 0.5;
+          opacity: 0.45;
           animation: slideBackground 20s linear infinite alternate;
         }
 

@@ -87,7 +87,7 @@ export default function Page() {
           </h1>
           <button 
             onClick={() => scrollToSection('layanan')} 
-            className="mt-8 bg-blue-500 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-blue-600"
+            className="mt-8 bg-blue-500 text-white px-6 py-3 rounded-full text-lg shadow-lg hover:bg-blue-600"
           >
             Pelajari Lebih Lanjut
           </button>
@@ -109,7 +109,7 @@ export default function Page() {
           </p>
           <button 
             onClick={() => scrollToSection('armada-kami')} 
-            className="mt-8 bg-blue-500 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-blue-600"
+            className="mt-8 bg-blue-500 text-white px-6 py-3 rounded-full text-lg shadow-lg hover:bg-blue-600"
           >
             Armada Kami
           </button>
@@ -144,7 +144,7 @@ export default function Page() {
                     <p className="text-center text-sm font-roboto text-gray-800 mt-2">{item.price}</p>
                   )}
                   {expandedIndex !== index && (
-                    <p className="text-center text-xs font-roboto text-gray-500 mt-2">Klik untuk menampilkan contoh quote harga</p>
+                    <p className="text-center text-xs font-roboto text-gray-500 mt-2">Tekan untuk menampilkan contoh quote harga</p>
                   )}
                 </div>
               </div>
@@ -166,11 +166,14 @@ export default function Page() {
           <h1 className="text-4xl md:text-6xl text-white text-center mb-5 font-oswald" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
             Ingin Menjadi Mitra Jawir Trucking?
           </h1>
-          <Link href="/mitra" legacyBehavior>
-            <a className="bg-blue-500 text-white px-5 py-3 rounded-lg text-lg shadow-lg hover:bg-blue-600 font-roboto">
-              Pelajari Kemitraan
-            </a>
-          </Link>
+          <button 
+            onClick={() => window.location.href = '/mitra'} 
+            className="mt-8 bg-blue-500 text-white px-6 py-3 rounded-full text-lg shadow-lg hover:bg-blue-600"
+          >
+            Pelajari Kemitraan
+          </button>
+
+
         </div>
       </div>
 
@@ -183,7 +186,7 @@ export default function Page() {
           background-image: url('/peta.png');
           background-size: cover;
           background-repeat: no-repeat;
-          opacity: 0.5;
+          opacity: 0.45;
           animation: slideBackground1 20s linear infinite alternate;
         }
 
@@ -194,7 +197,7 @@ export default function Page() {
           background-image: url('/KandangTruck3.jpg');
           background-size: cover;
           background-repeat: no-repeat;
-          opacity: 0.5;
+          opacity: 0.45;
           animation: slideBackground2 20s linear infinite alternate;
         }
 
@@ -205,7 +208,7 @@ export default function Page() {
           background-image: url('/KandangTruck4.jpg');
           background-size: cover;
           background-repeat: no-repeat;
-          opacity: 0.5;
+          opacity: 0.45;
           animation: slideBackground2 20s linear infinite alternate;
         }
 

@@ -1,4 +1,3 @@
-// components/Footer.js
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineInstagram, AiOutlineWhatsApp, AiOutlineFacebook } from 'react-icons/ai';
@@ -9,10 +8,10 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between items-center">
           <div className="flex flex-col items-center mb-4 w-full md:w-auto">
-            <Link href="/#armada-kami" className="mb-2 hover:underline text-center">
+            <Link href="/#armada-kami" className="mb-2 hover:underline text-center text-xl">
               Armada
             </Link>
-            <Link href="tentang-kami" className="mb-2 hover:underline text-center">
+            <Link href="tentang-kami" className="mb-2 hover:underline text-center text-xl">
               Tentang Kami
             </Link>
           </div>
@@ -20,23 +19,23 @@ export default function Footer() {
             <Image src="/logo.png" alt="Jawir Trucking Logo" width={200} height={200} />
           </div>
           <div className="flex flex-col items-center mb-4 w-full md:w-auto">
-            <p className="mb-2">Ingin Menjadi Mitra?</p>
-            <Link href="/mitra" className="hover:underline text-center">
+            <p className="mb-2 text-xl">Ingin Menjadi Mitra?</p>
+            <Link href="/contact-us" className="hover:underline text-center text-xl">
               Kontak
             </Link>
           </div>
         </div>
         <div className="border-t border-white mt-8"></div>
         <div className="flex flex-wrap justify-center mt-4 space-x-4">
-          <a href="https://www.instagram.com/jawir.trucking/" className="flex items-center space-x-2 hover:underline">
+          <a href="https://www.instagram.com/jawir.trucking/" className="flex items-center space-x-2 hover:underline text-xl">
             <AiOutlineInstagram className="text-2xl" />
             <span className="hidden md:inline">jawir.trucking</span>
           </a>
-          <a href="https://wa.me/6285183005400" className="flex items-center space-x-2 hover:underline">
+          <a href="https://wa.me/6285183005400" className="flex items-center space-x-2 hover:underline text-xl">
             <AiOutlineWhatsApp className="text-2xl" />
             <span className="hidden md:inline">0851-8300-5400</span>
           </a>
-          <a href="https://www.facebook.com/people/Jawir-Trucking/61561186393034/" className="flex items-center space-x-2 hover:underline">
+          <a href="https://www.facebook.com/people/Jawir-Trucking/61561186393034/" className="flex items-center space-x-2 hover:underline text-xl">
             <AiOutlineFacebook className="text-2xl" />
             <span className="hidden md:inline">Jawir Trucking</span>
           </a>
