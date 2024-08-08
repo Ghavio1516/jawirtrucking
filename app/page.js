@@ -150,6 +150,25 @@ export default function Page() {
               </div>
             ))}
           </div>
+          <div className="text-center mb-8 mt-12"> {/* Added mt-12 here */}
+            <p className="text-xl font-bold font-roboto">Ingin tahu lebih lanjut?</p>
+          </div>
+          <div className="flex justify-center gap-4 mt-8"> {/* Added mt-8 here */}
+            <a 
+              href="mailto:hr@jawirtrucking.id" 
+              className="bg-blue-500 text-white px-6 py-3 rounded-full text-lg shadow-lg hover:bg-blue-600 flex items-center gap-2"
+            >
+              <img src="/mail.png" alt="Email Icon" className="w-6 h-6" />
+              Hubungi Kami
+            </a>
+            <a 
+              href="https://wa.me/6285183005400" 
+              className="bg-green-500 text-white px-6 py-3 rounded-full text-lg shadow-lg hover:bg-green-600 flex items-center gap-2"
+            >
+              <img src="/whatsapp.png" alt="WhatsApp Icon" className="w-6 h-6" />
+              Hubungi Kami
+            </a>
+          </div>
           <button onClick={handlePrevClick} className="absolute left-0 top-1/2 transform -translate-y-1/2 p-3 bg-gray-300 rounded-full shadow-lg">
             &lt;
           </button>
@@ -194,7 +213,7 @@ export default function Page() {
           position: absolute;
           inset: 0;
           z-index: -1;
-          background-image: url('/KandangTruck3.jpg');
+          background-image: url('/lookatlaptop.jpg');
           background-size: cover;
           background-repeat: no-repeat;
           opacity: 0.45;

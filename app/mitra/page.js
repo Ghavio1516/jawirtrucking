@@ -18,7 +18,7 @@ const Mitra = () => {
 
   const items = [
     { 
-      src: "/KandangTruck1.jpg", 
+      src: "/ketentuanarmada.png", 
       alt: "Truck", 
       description: (
         <div>
@@ -100,36 +100,39 @@ const Mitra = () => {
 
 
       <div id="ketentuan-mitra" className="w-full flex justify-center items-center flex-col bg-white py-12">
-        <h2 className="text-center font-bold text-4xl mb-4 font-oswald">
-          Ketentuan Bermitra
-        </h2>
-        <p className="text-center text-lg mb-8 max-w-2xl font-roboto">
-          Untuk memenuhi beragam kebutuhan logistik pelanggan kami, ketahui ketentuan bermitra berikut.
-        </p>
-        <div className="relative w-full max-w-7xl mx-auto">
-          <div className="relative flex overflow-hidden w-full">
-            {items.map((item, index) => (
-              <div 
-                key={index} 
-                className={`transition-opacity duration-500 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0 absolute w-full'}`}
-              >
-                <div className="bg-white p-5 rounded-lg shadow-lg flex items-center w-full">
-                  <Image src={item.src} alt={item.alt} width={windowWidth < 640 ? 150 : 400} height={windowWidth < 640 ? 150 : 300} className="object-contain w-2/5" />
-                  <div className="ml-4 w-3/5 font-roboto">
-                    {item.description}
-                  </div>
-                </div>
+  <div className="w-full max-w-7xl mx-auto px-4"> {/* Added px-4 for padding */}
+    <h2 className="text-left font-bold text-4xl mb-4 font-oswald">
+      Ketentuan Bermitra
+    </h2>
+    <p className="text-left text-lg mb-8 font-roboto">
+      Untuk memenuhi beragam kebutuhan logistik pelanggan kami, ketahui ketentuan bermitra berikut.
+    </p>
+    <div className="relative w-full">
+      <div className="relative flex overflow-hidden w-full">
+        {items.map((item, index) => (
+          <div 
+            key={index} 
+            className={`transition-opacity duration-500 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0 absolute w-full'}`}
+          >
+            <div className="bg-white p-5 rounded-lg shadow-lg flex items-center w-full">
+              <Image src={item.src} alt={item.alt} width={windowWidth < 640 ? 150 : 400} height={windowWidth < 640 ? 150 : 300} className="object-contain w-2/5" />
+              <div className="ml-4 w-3/5 font-roboto">
+                {item.description}
               </div>
-            ))}
+            </div>
           </div>
-          <button onClick={handlePrevClick} className="absolute left-0 top-1/2 transform -translate-y-1/2 p-3 bg-gray-300 rounded-full shadow-lg">
-            &lt;
-          </button>
-          <button onClick={handleNextClick} className="absolute right-0 top-1/2 transform -translate-y-1/2 p-3 bg-gray-300 rounded-full shadow-lg">
-            &gt;
-          </button>
-        </div>
+        ))}
       </div>
+      <button onClick={handlePrevClick} className="absolute left-0 top-1/2 transform -translate-y-1/2 p-3 bg-gray-300 rounded-full shadow-lg">
+        &lt;
+      </button>
+      <button onClick={handleNextClick} className="absolute right-0 top-1/2 transform -translate-y-1/2 p-3 bg-gray-300 rounded-full shadow-lg">
+        &gt;
+      </button>
+    </div>
+  </div>
+</div>
+
 
       <div className="relative flex-1">
         <div className="absolute inset-0 z-0">
@@ -144,7 +147,8 @@ const Mitra = () => {
               Anda Adalah Mitra yang Kami Cari!!
             </h1>
             <p className="text-lg font-roboto text-white mb-8">
-              Bergabunglah dengan Jawir Trucking dan menjadi bagian dari revolusi logistik di Jawa Timur. <br/> Kami mencari mitra dengan komitmen dan visi yang sama untuk memperluas jaringan transportasi yang efisien dan handal.
+              Bergabunglah dengan Jawir Trucking dan menjadi bagian dari revolusi logistik di Jawa Timur. <br/> Kami mencari mitra dengan komitmen dan visi yang sama untuk memperluas jaringan transportasi yang efisien dan handal. 
+              <br/><br/> Hubungi kami melalui E-mail atau kontak Departemen HR kami untuk informasi lebih lanjut :
             </p>
             <div className="flex justify-center gap-4">
               <a 

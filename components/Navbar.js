@@ -15,11 +15,14 @@ const Navbar = () => {
       <div className="flex flex-col">
         <Link href="/" legacyBehavior>
           <a>
-            <img src="/logo.png" alt="Jawir Trucking Logo" className="h-20 w-auto" />
+            <img
+              src="/logo.png"
+              alt="Jawir Trucking Logo"
+              className="h-20 w-auto md:h-15 sm:h-16"
+            />
           </a>
         </Link>
       </div>
-
 
       <ul className="hidden md:flex gap-6 m-0 p-0">
         <li className="text-white text-lg">
@@ -43,6 +46,7 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
+
       <div className="md:hidden flex items-center">
         <button onClick={toggleMenu} className="text-white focus:outline-none">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -50,6 +54,7 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
+
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-blue-600 text-white transform ${
           menuOpen ? 'translate-x-0' : 'translate-x-full'
@@ -69,6 +74,11 @@ const Navbar = () => {
           <li className="text-white text-lg p-4 border-b border-blue-500">
             <Link href="/mitra" legacyBehavior>
               <a onClick={toggleMenu}>Mitra</a>
+            </Link>
+          </li>
+          <li className="text-white text-lg p-4 border-b border-blue-500">
+            <Link href="/contact-us" legacyBehavior>
+              <a onClick={toggleMenu}>Kontak</a>
             </Link>
           </li>
           <li className="text-white text-lg p-4 border-b border-blue-500">

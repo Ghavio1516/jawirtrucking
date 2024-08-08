@@ -6,8 +6,8 @@ export default function Footer() {
   return (
     <footer className="bg-blue-900 text-white py-8">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-between items-center">
-          <div className="flex flex-col items-center mb-4 w-full md:w-auto">
+        <div className="flex flex-wrap items-center">
+          <div className="flex flex-col items-center mb-4 w-full md:w-1/3 md:border-r md:border-white md:pr-4">
             <Link href="/#armada-kami" className="mb-2 hover:underline text-center text-xl">
               Armada
             </Link>
@@ -15,10 +15,10 @@ export default function Footer() {
               Tentang Kami
             </Link>
           </div>
-          <div className="flex flex-col items-center mb-4 w-full md:w-auto">
+          <div className="flex flex-col items-center mb-4 w-full md:w-1/3 px-4">
             <Image src="/logo.png" alt="Jawir Trucking Logo" width={200} height={200} />
           </div>
-          <div className="flex flex-col items-center mb-4 w-full md:w-auto">
+          <div className="flex flex-col items-center mb-4 w-full md:w-1/3 md:border-l md:border-white md:pl-4">
             <p className="mb-2 text-xl">Ingin Menjadi Mitra?</p>
             <Link href="/contact-us" className="hover:underline text-center text-xl">
               Kontak
