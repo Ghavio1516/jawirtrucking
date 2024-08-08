@@ -51,7 +51,7 @@ export default function ContactUs() {
                 Departemen HR
               </button>
               <button 
-                onClick={() => window.location.href = 'https://wa.me/6285183005401'} 
+                onClick={() => window.location.href = 'https://wa.me/6285183005400'} 
                 className="bg-green-500 text-white px-6 py-3 rounded-full text-lg shadow-lg hover:bg-green-600 flex items-center gap-2"
               >
                 <AiOutlineWhatsApp className="w-6 h-6" />
