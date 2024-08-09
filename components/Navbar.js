@@ -18,7 +18,7 @@ const Navbar = () => {
             <img
               src="/logo.png"
               alt="Jawir Trucking Logo"
-              className="h-20 w-auto md:h-15 sm:h-16"
+              className="h-16 w-auto sm:h-20 md:h-15"
             />
           </a>
         </Link>
