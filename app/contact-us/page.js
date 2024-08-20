@@ -7,20 +7,26 @@ export default function ContactUs() {
   return (
     <div className="flex flex-col min-h-screen text-black font-roboto">
       <Navbar />
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
-        <div className="text-center mb-10">
-          <h1 className="text-4xl md:text-5xl font-bold font-oswald text-gray-800 mb-4">
+      <div className="flex flex-col items-center justify-center min-h-screen relative">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0 background-image"></div>
+        
+        {/* Kontak Kami Content */}
+        <div className="relative z-10 text-center mb-10 px-4">
+          <h1 className="text-4xl md:text-5xl font-bold font-oswald text-white mb-4">
             Kontak Kami
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto mb-6 font-roboto">
+          <p className="text-lg md:text-xl text-white max-w-4xl mx-auto mb-6 font-roboto">
             Jawir Trucking adalah pilihan terbaik untuk kebutuhan logistik Anda di Jawa Timur. <br/><br/> Hubungi kami sekarang untuk informasi lebih lanjut!
           </p>
         </div>
         
-        <div className="flex flex-col md:flex-row justify-center gap-16 mb-10">
+        <div className="relative z-10 flex flex-col md:flex-row justify-center gap-16 mb-10">
           <div className="text-center">
-            <img src="/mail.png" alt="Email Logo" className="w-12 h-12 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-700 mb-4">E-mail</h3>
+            <div className="icon-background-mail mb-4">
+              <img src="/mail.png" alt="Email Logo" className="w-12 h-12" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-4">E-mail</h3>
             <div className="flex flex-col items-center">
               <button 
                 onClick={() => window.location.href = 'mailto:hr@jawirtrucking.id'} 
@@ -40,8 +46,10 @@ export default function ContactUs() {
           </div>
 
           <div className="text-center">
-            <img src="/whatsapp.png" alt="WhatsApp Logo" className="w-12 h-12 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-700 mb-4">WhatsApp</h3>
+            <div className="icon-background-wa mb-4">
+              <img src="/whatsapp.png" alt="WhatsApp Logo" className="w-12 h-12" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-4">WhatsApp</h3>
             <div className="flex flex-col items-center">
               <button 
                 onClick={() => window.location.href = 'https://wa.me/6285183005400'} 
@@ -62,6 +70,34 @@ export default function ContactUs() {
         </div>
       </div>
       <Footer />
+
+      {/* Styling for background image, icon background, and text */}
+      <style jsx>{`
+        .background-image {
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+          background-image: url('/bgkontak.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-color: rgba(0, 0, 0, 0.55); /* Background color to make the image darker */
+          background-blend-mode: overlay;
+          opacity: 0.45;
+        }
+
+        .icon-background-wa {
+          background-color: rgba(0, 255, 0, 0.55);
+          border-radius: 50%;
+          padding: 15px;
+          display: inline-block;
+        }
+          .icon-background-mail {
+          background-color: rgba(0, 0, 255, 0.75);
+          border-radius: 50%;
+          padding: 15px;  
+          display: inline-block;
+        }
+      `}</style>
     </div>
   );
 }
