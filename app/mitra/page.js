@@ -22,7 +22,7 @@ const Mitra = () => {
       alt: "Truck", 
       description: (
         <div>
-          <p className="list-disc pl-5 text-left">kami mencari calon mitra yang memiliki armada truk dan kapabilitas untuk menyupiri armada tersebut. Berikut berbagai jenis kendaraan yang kami anggap cocok untuk bergabung dengan Jawir Trucking:</p>
+          <p className="list-disc pl-5 text-left">Kami mencari calon mitra yang memiliki armada truk dan kapabilitas untuk menyupiri armada tersebut. Berikut berbagai jenis kendaraan yang kami anggap cocok untuk bergabung dengan Jawir Trucking:</p>
           <ul className="list-disc pl-5 text-left">
             <li>Pickup</li>
             <li>Blind Van</li>
