@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { AiOutlineInstagram, AiOutlineWhatsApp, AiOutlineFacebook } from 'react-icons/ai';
+import { AiOutlineInstagram, AiOutlineWhatsApp, AiOutlineFacebook, AiOutlineLinkedin } from 'react-icons/ai';
 
 export default function Footer() {
   return (
@@ -11,7 +11,7 @@ export default function Footer() {
             <Link href="/#armada-kami" className="mb-2 hover:underline text-center text-xl">
               Armada
             </Link>
-            <Link href="tentang-kami" className="mb-2 hover:underline text-center text-xl">
+            <Link href="/tentang-kami" className="mb-2 hover:underline text-center text-xl">
               Tentang Kami
             </Link>
           </div>
@@ -23,6 +23,10 @@ export default function Footer() {
             <Link href="/contact-us" className="hover:underline text-center text-xl">
               Kontak
             </Link>
+            <p className="mt-4 text-center text-lg">
+              PT. JAWA TIMUR TRUCKING <br />
+              NIB : 2808240078292
+            </p>
           </div>
         </div>
         <div className="border-t border-white mt-8"></div>
@@ -33,10 +37,14 @@ export default function Footer() {
           </a>
           <a href="https://wa.me/6285183005400" className="flex items-center space-x-2 hover:underline text-xl">
             <AiOutlineWhatsApp className="text-2xl" />
-            <span className="hidden md:inline">0851-8300-5400</span>
+            <span className="hidden md:inline">(+62)851-8300-5400</span>
           </a>
           <a href="https://www.facebook.com/people/Jawir-Trucking/61561186393034/" className="flex items-center space-x-2 hover:underline text-xl">
             <AiOutlineFacebook className="text-2xl" />
+            <span className="hidden md:inline">Jawir Trucking</span>
+          </a>
+          <a href="https://www.linkedin.com/company/jawa-timur-trucking" className="flex items-center space-x-2 hover:underline text-xl">
+            <AiOutlineLinkedin className="text-2xl" />
             <span className="hidden md:inline">Jawir Trucking</span>
           </a>
         </div>
