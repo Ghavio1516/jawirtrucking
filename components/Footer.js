@@ -24,7 +24,7 @@ export default function Footer() {
               Kontak
             </Link>
             <p className="mt-4 text-center text-lg">
-              PT. JAWA TIMUR TRUCKING <br />
+              PT JAWA TIMUR TRUCKING <br />
               NIB : 2808240078292
             </p>
           </div>
@@ -45,7 +45,7 @@ export default function Footer() {
           </a>
           <a href="https://www.linkedin.com/company/jawa-timur-trucking" className="flex items-center space-x-2 hover:underline text-xl">
             <AiOutlineLinkedin className="text-2xl" />
-            <span className="hidden md:inline">Jawir Trucking</span>
+            <span className="hidden md:inline">PT Jawa Timur Trucking</span>
           </a>
         </div>
       </div>
