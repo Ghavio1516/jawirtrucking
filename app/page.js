@@ -155,7 +155,7 @@ export default function Page() {
           </div>
           <div className="flex justify-center gap-4 mt-8"> {/* Added mt-8 here */}
             <a 
-              href="mailto:hr@jawirtrucking.id" 
+              href="mailto:operational@jawirtrucking.id" 
               className="bg-blue-500 text-white px-6 py-3 rounded-full text-lg shadow-lg hover:bg-blue-600 flex items-center gap-2"
             >
               <img src="/mail.png" alt="Email Icon" className="w-6 h-6" />
