@@ -36,7 +36,7 @@ export default function ContactUs() {
                 Departemen HR
               </button>
               <button 
-                onClick={() => window.location.href = 'mailto:marketing@jawirtrucking.id'} 
+                onClick={() => window.location.href = 'mailto:operational@jawirtrucking.id'} 
                 className="bg-blue-600 text-white px-6 py-3 rounded-full text-lg shadow-lg hover:bg-blue-700 flex items-center gap-2"
               >
                 <AiOutlineMail className="w-6 h-6" />
