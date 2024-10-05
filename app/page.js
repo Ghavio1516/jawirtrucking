@@ -73,7 +73,9 @@ export default function Page() {
       <Navbar />
       <div className="relative flex-1">
         <div className="absolute inset-0 z-0">
-          <div className="background-image-1"></div>
+          <div className="background-image-1">
+            <div className="overlay"></div>
+          </div>
         </div>
         <div className="relative flex flex-col justify-center items-center h-screen z-10">
           <h1 
@@ -95,7 +97,9 @@ export default function Page() {
       </div>
       <div id="layanan" className="relative flex-1">
         <div className="absolute inset-0 z-0">
-          <div className="background-image-3"></div>
+          <div className="background-image-3">
+            <div className="overlay"></div>
+          </div>
         </div>
         <div className="relative flex flex-col justify-center items-start h-screen z-10 p-10">
           <h1 className="text-4xl md:text-6xl text-white mb-5 font-oswald" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
@@ -179,7 +183,9 @@ export default function Page() {
       </div>
       <div className="relative flex-1">
         <div className="absolute inset-0 z-0">
-          <div className="background-image-2"></div>
+          <div className="background-image-2">
+            <div className="overlay"></div>
+          </div>
         </div>
         <div className="relative flex flex-col justify-center items-center h-screen z-10">
           <h1 className="text-4xl md:text-6xl text-white text-center mb-5 font-oswald" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
@@ -198,6 +204,16 @@ export default function Page() {
 
       <Footer />
       <style jsx>{`
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.5); /* Ubah nilai alpha untuk mengatur transparansi */
+        }
+          
         .background-image-1 {
           position: absolute;
           inset: 0;
@@ -205,7 +221,7 @@ export default function Page() {
           background-image: url('/peta.png');
           background-size: cover;
           background-repeat: no-repeat;
-          opacity: 0.45;
+          opacity: 1.0;
           animation: slideBackground1 20s linear infinite alternate;
         }
 
@@ -216,7 +232,7 @@ export default function Page() {
           background-image: url('/lookatlaptop.jpg');
           background-size: cover;
           background-repeat: no-repeat;
-          opacity: 0.45;
+          opacity: 1.0;
           animation: slideBackground2 20s linear infinite alternate;
         }
 
@@ -227,7 +243,7 @@ export default function Page() {
           background-image: url('/KandangTruck4.jpg');
           background-size: cover;
           background-repeat: no-repeat;
-          opacity: 0.45;
+          opacity: 1.0;
           animation: slideBackground2 20s linear infinite alternate;
         }
 

@@ -7,9 +7,11 @@ export default function ContactUs() {
   return (
     <div className="flex flex-col min-h-screen text-black font-roboto">
       <Navbar />
-      <div className="flex flex-col items-center justify-center min-h-screen relative">
+      <div className="flex flex-col items-center justify-center min-h-screen relative pt-24">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0 background-image"></div>
+        <div className="absolute inset-0 z-0 background-image">
+          <div className="overlay"></div>
+        </div>
         
         {/* Kontak Kami Content */}
         <div className="relative z-10 text-center mb-10 px-4">
@@ -73,16 +75,25 @@ export default function ContactUs() {
 
       {/* Styling for background image, icon background, and text */}
       <style jsx>{`
-        .background-image {
+        .overlay {
           position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+          
+        .background-image {
+          position: absolute; /* Keep this as absolute */
           inset: 0;
           z-index: -1;
           background-image: url('/bgkontak.jpg');
           background-size: cover;
           background-repeat: no-repeat;
-          background-color: rgba(0, 0, 0, 0.55); /* Background color to make the image darker */
+          background-color: rgba(0, 0, 0, 0.55);
           background-blend-mode: overlay;
-          opacity: 0.45;
+          opacity: 1.0;
         }
 
         .icon-background-wa {
@@ -91,7 +102,8 @@ export default function ContactUs() {
           padding: 15px;
           display: inline-block;
         }
-          .icon-background-mail {
+
+        .icon-background-mail {
           background-color: rgba(0, 0, 255, 0.75);
           border-radius: 50%;
           padding: 15px;  

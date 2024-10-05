@@ -74,7 +74,9 @@ const Mitra = () => {
       <Navbar />
       <div className="relative flex-1">
         <div className="absolute inset-0 z-0">
-          <div className="background-image-1"></div>
+          <div className="background-image-1">
+            <div className="overlay"></div>
+          </div>
         </div>
         <div className="relative flex flex-col justify-center items-center h-screen z-10 px-4">
           <h1 
@@ -136,7 +138,9 @@ const Mitra = () => {
 
       <div className="relative flex-1">
         <div className="absolute inset-0 z-0">
-          <div className="background-image-2"></div>
+          <div className="background-image-2">
+            <div className="overlay"></div>
+          </div>
         </div>
         <div className="relative flex justify-center items-center h-screen z-10 px-4">
           <div className="text-center">
@@ -176,6 +180,16 @@ const Mitra = () => {
       <Footer />
 
       <style jsx>{`
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.5); /* Ubah nilai alpha untuk mengatur transparansi */
+        }
+
         .background-image-1 {
           position: absolute;
           inset: 0;
@@ -183,7 +197,7 @@ const Mitra = () => {
           background-image: url('/KandangTruck2.jpg');
           background-size: cover;
           background-repeat: no-repeat;
-          opacity: 0.45;
+          opacity: 1.0;
           animation: slideBackground1 20s linear infinite alternate;
         }
 
@@ -194,7 +208,7 @@ const Mitra = () => {
           background-image: url('/KandangTruck4.jpg');
           background-size: cover;
           background-repeat: no-repeat;
-          opacity: 0.45;
+          opacity: 1.0;
           animation: slideBackground2 20s linear infinite alternate;
         }
 

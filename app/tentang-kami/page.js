@@ -35,7 +35,9 @@ const TentangKami = () => {
       <Navbar />
       <div className="relative flex-1 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="background-image"></div>
+          <div className="background-image">
+            <div className="overlay"></div>
+          </div>
         </div> 
         {/* h-full */}
         <div className="relative flex flex-col justify-center items-center h-screen min-h-[70vh] z-10 px-5 md:px-10 py-10 md:py-20">      
@@ -51,6 +53,14 @@ const TentangKami = () => {
       <Footer />
 
       <style jsx>{`
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.5); /* Ubah nilai alpha untuk mengatur transparansi */
+        }
         .background-image {
           position: absolute;
           inset: 0;
@@ -58,7 +68,7 @@ const TentangKami = () => {
           background-image: url('/peta.png');
           background-size: cover;
           background-repeat: no-repeat;
-          opacity: 0.45;
+          opacity: 1.0;
           animation: slideBackground 20s linear infinite alternate;
         }
 
