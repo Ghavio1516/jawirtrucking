@@ -26,12 +26,12 @@ export default function Page() {
   }, []);
 
   const items = [
-    { src: "/Pickup.png", alt: "Pickup", text: "Pickup", weight: "Beban Maksimum : 1 ton", price: "Surabaya - Malang : Rp. 740.000" },
-    { src: "/Blindvan.png", alt: "Blind Van", text: "Blind Van", weight: "Beban Maksimum : 1 ton", price: "Madiun - Mojokerto : Rp. 890.400" },
-    { src: "/CDEOpen.png", alt: "CDE Open", text: "CDE Open", weight: "Beban Maksimum : 2 ton", price: "Blitar - Jember : Rp. 2.145.600" },
-    { src: "/CDEBox.png", alt: "CDE Box", text: "CDE Box", weight: "Beban Maksimum : 2 ton", price: "Tuban - Lumajang : Rp. 2.487.500" },
-    { src: "/CDDOpen.png", alt: "CDD Open", text: "CDD Open", weight: "Beban Maksimum : 4 ton", price: "Banyuwangi - Probolinggo : Rp. 2.307.200" },
-    { src: "/CDDBox.png", alt: "CDD Box", text: "CDD Box", weight: "Beban Maksimum : 4 ton", price: "Surabaya - Madiun : Rp. 2.136.500" }
+    { src: "/Pickup.png", alt: "Pickup", text: "Pickup", weight: "Beban Maksimum : 1.5 ton", price: "Surabaya - Malang : Rp. 740.000" },
+    { src: "/Blindvan.png", alt: "Blind Van", text: "Blind Van", weight: "Beban Maksimum : 1.5 ton", price: "Madiun - Mojokerto : Rp. 890.400" },
+    { src: "/CDEOpen.png", alt: "CDE Open", text: "CDE Open", weight: "Beban Maksimum : 4 ton", price: "Blitar - Jember : Rp. 2.145.600" },
+    { src: "/CDEBox.png", alt: "CDE Box", text: "CDE Box", weight: "Beban Maksimum : 4 ton", price: "Tuban - Lumajang : Rp. 2.487.500" },
+    { src: "/CDDOpen.png", alt: "CDD Open", text: "CDD Open", weight: "Beban Maksimum : 8 ton", price: "Banyuwangi - Probolinggo : Rp. 2.307.200" },
+    { src: "/CDDBox.png", alt: "CDD Box", text: "CDD Box", weight: "Beban Maksimum : 8 ton", price: "Surabaya - Madiun : Rp. 2.136.500" }
   ];
 
   const handlePrevClick = () => {
